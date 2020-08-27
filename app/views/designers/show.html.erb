@@ -1,6 +1,41 @@
 <p>
-  <strong></strong>
-  <%= @designer.name%>
-  <%= @designer.description %>
 
 </p>
+
+<div class="card-product">
+  <img src="https://lh3.googleusercontent.com/proxy/ZZbqqP0c0devfrma6sgtl69RGoQqLpvabPD9qG3UHzvY6OIz0ibnKr4NXDdqC-E_QvvtrVuDiXUIhB7ApCzJf_-ziHIG06wMCO_tf_81Aaw011OxhmLJhCxcZWI3lp0mcery"/>
+  <div class="card-product-infos">
+    <h2><%= @designer.name%></h2>
+    <p><%= @designer.description  %></p>
+    <a href="http://bukiakomolafe.com/about/" class="btn ">www.bukiakomolafe.com</a>
+  </div>
+</div>
+
+<!-- 1. ask how to change website
+     2. how to change photo -->
+
+<p>
+
+
+</p>
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text"> <% @products.each do |product|%>
+    <%= product.name %>
+    <%= product.price %>
+    <%= product.color %>
+    <%= product.category_id %>
+   <% end %>
+</p>
+  </div>
+</div>
+
+
+
+
+<div>
+<%= link_to 'Back to all designers', designers_path %>
+</div>
+
