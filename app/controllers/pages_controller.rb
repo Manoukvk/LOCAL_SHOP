@@ -9,7 +9,8 @@ end
     design = Design.find
   end
 
- def product = Product.find
+ def product 
+  product = Product.find
  end
 
 #fetch the data from the database: you can acces all the model
