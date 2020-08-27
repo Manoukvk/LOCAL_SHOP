@@ -13,6 +13,7 @@ end
 #   product = Product.find
 #  end
 
+
 #fetch the data from the database: you can acces all the model
 #banner : just design
 #2cards : designer database
