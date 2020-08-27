@@ -5,6 +5,13 @@ class PagesController < ApplicationController
   end
 end
 
+#   def designer
+#     designer = Designer.find
+#   end
+
+#  def product
+#   product = Product.find
+#  end
 
 
 #fetch the data from the database: you can acces all the model
