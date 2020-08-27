@@ -1,12 +1,14 @@
 <% @products.each do |product| %>
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
+  <%= link_to product_path(product) do  %>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
     <h3> <%= product.name.upcase %> - <%= product.color %> </h3>
     <p class="card-text"> <%= product.description %> </p>
-    <p class="card-text"> <%= product.price %> </p>
+     <p class="card-text"> <%= product.price %> </p>
+    </div>
+    <img class="card-img-top" src="https://lp.cosstores.com/app001prod?set=key%5Bresolve.pixelRatio%5D,value%5B2%5D&set=key%5Bresolve.width%5D,value%5B400%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&set=key%5Bresolve.quality%5D,value%5B60%5D&set=ImageVersion%5B202002141835%5D,source%5B01_0847273_002_6%5D,type%5BECOMLOOK%5D&call=url%5Bfile:/product/dynamic.chain%5D" alt="Card image cap">
   </div>
-  <img class="card-img-top" src="..." alt="Card image cap">
-</div>
+  <% end %>
 <% end %>
 
 

@@ -19,6 +19,14 @@ designer3 = Designer.create(name: "Cruba", description: "We strive to combine ar
 
 puts "designer created"
 
+category1 = Category.create(name: "Tops", gender: "women")
+
+product1 = Product.new(name: "Vest", price: "75", color: "navy blue", category: category1)
+
+product1.designer = designer1
+
+product1.save!
+
 
 
 
