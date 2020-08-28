@@ -1,34 +1,33 @@
-<p>
-
-</p>
 
 <div class="card-product">
   <%=cl_image_tag @designer.photo.key%>
   <div class="card-product-infos">
     <h2><%= @designer.name%></h2>
     <p><%= @designer.description  %></p>
+  </div>
 </div>
 
 <!-- 1. How to add link to designers website
      2. how to change photo -->
 
-<p>
 
-
-</p>
-
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-body">
-    <p class="card-text"> <% @designer.products.each do |product|%>
-    <%= product.name %>
-    <%= product.price %>
-    <%= product.color %>
-    <%= product.category_id %>
-   <% end %>
-</p>
+<section class="row justify-content-center">
+  <% @designer.products.each do |product| %>
+  <%= link_to product_path(product), class: "mt-5" do  %>
+  <div class="col-lg-4 h-100">
+    <div class="card h-100" style="width: 32rem;">
+      <div class="card-body">
+        <h3> <%= product.name %> </h3>
+        <p class="card-text"> <%= product.description %> </p>
+      </div>
+      <%= cl_image_tag product.photos.first.key, class: "card-img-top" %>
+      <div class="d-flex justify-content-between align-items-center pl-3 pr-3 pb-2 pt-2">
+      </div>
+    </div>
   </div>
-</div>
+  <% end %>
+<% end %>
+</section>
 
 
 
