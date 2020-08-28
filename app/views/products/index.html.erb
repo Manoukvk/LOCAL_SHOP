@@ -1,18 +1,21 @@
-<% @products.each do |product| %>
-<%= link_to product_path(product) do  %>
-<div class="card" style="width: 25rem;">
-  <div class="card-body">
-    <h3> <%= "by Designer" %> </h3>
-    <h2> <%= product.name %> </h2>
-    <p class="card-text"> <%= product.description %> </p>
-    <p class="card-text"> <%= product.color %> </p>
+<section class="row justify-content-center">
+  <% @products.each do |product| %>
+  <%= link_to product_path(product), class: "mt-5" do  %>
+  <div class="col-lg-4 h-100">
+    <div class="card h-100" style="width: 32rem;">
+      <div class="card-body">
+        <h3> <%= product.designer.name %> </h3>
+        <h2> <%= product.name %> </h2>
+        <p class="card-text"> <%= product.description %> </p>
+      </div>
+      <%= cl_image_tag product.photos.first.key, class: "card-img-top" %>
+      <div class="d-flex justify-content-between align-items-center pl-3 pr-3 pb-2 pt-2">
+        <p class="mb-0"> <%= product.price %>,- € </p>
+        <p class="mb-0"><%= "Available size" %> </p>
+        <i class="fas fa-shopping-cart"></i>
+      </div>
+    </div>
   </div>
-  <%= image_tag(product.foto, class: "card-img-top") %>
-  <div class="d-flex justify-content-between align-items-center p-3">
-    <p class="mb-0"> <%= product.price %>,- € </p>
-    <p class="mb-0"><%= "Available size" %> </p>
-    <i class="fas fa-shopping-cart"></i>
-  </div>
-</div>
   <% end %>
 <% end %>
+</section>

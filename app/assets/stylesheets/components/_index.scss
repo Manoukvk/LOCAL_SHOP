@@ -4,3 +4,12 @@
 @import "navbar";
 @import "card";
 @import 'banner';
+@import "container";
+
+a {
+  text-decoration: none;
+&:hover {
+  text-decoration: none;
+}
+}
+
