@@ -24,10 +24,69 @@ text-shadow: #2a8d7b -1px -1px;
 }
 
 button a {
-  color: black;
+  color: #decdc3;
 
 }
 button a:hover {
   color:white;
 
 }
+
+.card img{
+height:400px;
+}
+
+
+li
+{
+  list-style-type: none;
+  margin-left: 1vw;
+}
+
+li:first-child
+{
+  margin:0;
+}
+
+footer
+{
+  padding-top: 5vh;
+  padding-bottom: 2vh;
+}
+
+.content
+{
+  height: 50vh;
+  background-color: lightgray;
+}
+
+.container
+{
+  background-color: beige;
+}
+
+.copyright,  .impressum
+{
+  text-align: center;
+}
+
+.logo
+{
+  height: 8vh;
+}
+
+@media (max-width: 768px)
+{
+  li
+  {
+    margin-left: 0;
+    margin-bottom: 1vh;
+  }
+
+  .sozial
+  {
+    margin-bottom: 1vh;
+  }
+}
+
+

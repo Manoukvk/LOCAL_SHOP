@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require "uri"
 
+
 Product.destroy_all
 Category.destroy_all
 Designer.destroy_all
@@ -178,6 +179,7 @@ url2 = "https://res.cloudinary.com/dujumejgm/image/upload/v1598513049/Designer/I
 url3 = "https://res.cloudinary.com/dujumejgm/image/upload/v1598513048/Designer/ID_3/Products/ID_13/J33-1-khaya-jacket-flat-olive-3_1000x_ID13_wcittx.jpg"
 url_array = [url1, url2, url3]
 attach_photos(product13, url_array)
+
 
 product14 = Product.create(name: "Wakame Shirt Birds", description: "Short sleeve shirt with spread collar.", price: "85", color: "Purple ", size: "S/M/L", designer: designer3, category: man_shirt)
 url1 = "https://res.cloudinary.com/dujumejgm/image/upload/v1598513050/Designer/ID_3/Products/ID_14/wakame-birds-2019_04_30_0658_1000x_ID14_aiyun8.jpg"

@@ -7,10 +7,10 @@
 @import "container";
 
 a {
-  text-decoration: none;
-&:hover {
-  text-decoration: none;
+    text-decoration: none; 
+    color: black;
+    &:hover {
+        text-decoration: none;
+    }
 }
-}
-
 
