@@ -1,8 +1,16 @@
 
-<div>
-<h1>All the designers</h1>
+
+
+
 <% @designers.each do |designer| %>
-  <%= designer.name %><br>
-  <%= designer.description %><br>
+  <%= link_to designer_path(designer) do  %>
+<!--   <div class="card" style="width: 50rem;">
+ --><div class="card-product">
+    <div class="card-product-infos">
+<!--     <div class="card-body">
+ -->    <h2> <%= designer.name %></h2>
+    <p class="card-text"> <%= designer.description %> </p>
+    </div>
+  </div>
+  <% end %>
 <% end %>
-</div>
