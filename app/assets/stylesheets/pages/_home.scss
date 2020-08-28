@@ -7,7 +7,7 @@
 }
 
 .banner h1{
-color: #decdc3;
+color: white;
 font-family: Times New Roman;
 font-size: 25px;
 font-weight: 300;
@@ -36,5 +36,57 @@ button a:hover {
 height:400px;
 }
 
+
+li
+{
+  list-style-type: none;
+  margin-left: 1vw;
+}
+
+li:first-child
+{
+  margin:0;
+}
+
+footer
+{
+  padding-top: 5vh;
+  padding-bottom: 2vh;
+}
+
+.content
+{
+  height: 50vh;
+  background-color: lightgray;
+}
+
+.container
+{
+  background-color: beige;
+}
+
+.copyright,  .impressum
+{
+  text-align: center;
+}
+
+.logo
+{
+  height: 8vh;
+}
+
+@media (max-width: 768px)
+{
+  li
+  {
+    margin-left: 0;
+    margin-bottom: 1vh;
+  }
+
+  .sozial
+  {
+    margin-bottom: 1vh;
+  }
+}
 
 
