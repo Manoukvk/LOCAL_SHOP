@@ -1,30 +1,55 @@
 // Specific CSS for your home-page
 .banner {
-  background-image: url("https://images.unsplash.com/photo-1497997092403-f091fcf5b6c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
-  height: 400px;
- background-size: cover;
-
+  background-image: url(sewingmachine.jpeg);
+  height: 600px;
 }
 
 .banner h1{
-color: white;
-font-family: Times New Roman;
-font-size: 25px;
-font-weight: 300;
-line-height: 40px;
-margin: 0 30px 40px;
-text-align: right;
-text-shadow: #2a8d7b -1px -1px;
+  color: white;
+  font-family: Times New Roman;
+  font-size: 28px;
+  line-height: 40px;
+  margin: 0 30px 40px;
+  position: relative;
+  top: 240px;
+  left: 170px;
+  font-weight: 200;
+  opacity: 2;
+
 }
 
 .banner p{
+  color: white;
   font-family: Times New Roman;
-  text-align: buttom;
+  font-size: 28px;
+  line-height: 40px;
+  margin: 0 30px 40px;
+  position: relative;
+  top: 240px;
+  left: 170px;
+  opacity: 2;
+}
 
+.btn1 {
+  position: relative;
+  top: 250px;
+  left: 200px;
+  color: white;
+  border-radius: 5px;
+  border: none;
+}
+
+.btn2 {
+  border-radius: 5px;
+  position: relative;
+  top: 250px;
+  left: 300px;
 }
 
 button a {
   color: #decdc3;
+  font-size: 20px;
+
 
 }
 button a:hover {
@@ -50,8 +75,9 @@ li:first-child
 
 footer
 {
-  padding-top: 5vh;
-  padding-bottom: 2vh;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  justify-content: center;
 }
 
 .content
@@ -62,17 +88,17 @@ footer
 
 .container
 {
-  background-color: beige;
+  background-color: #F4F4F4;
 }
 
 .copyright,  .impressum
 {
-  text-align: center;
+  text-align: right;
 }
 
 .logo
 {
-  height: 8vh;
+  height: 25px;
 }
 
 @media (max-width: 768px)
@@ -81,6 +107,7 @@ footer
   {
     margin-left: 0;
     margin-bottom: 1vh;
+    padding: none;
   }
 
   .sozial
