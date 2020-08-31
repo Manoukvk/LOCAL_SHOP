@@ -1,11 +1,11 @@
 
  <%= link_to product_path(product), class: "mt-5" do  %>
   <div class="col-lg-4 h-100">
-    <div class="card h-100" style="width: 32rem;">
+    <div class="card h-100 card-center" style="width: 22rem;">
       <div class="card-body">
         <h3> <%= product.designer.name %> </h3>
         <h2> <%= product.name %> </h2>
-        <p class="card-text"> <%= product.description %> </p>
+        <!-- <p class="card-text"> <%= product.description %> </p> -->
       </div>
       <%= cl_image_tag product.photos.first.key, class: "card-img-top" %>
       <div class="d-flex justify-content-between align-items-center pl-3 pr-3 pb-2 pt-2">
@@ -18,3 +18,4 @@
     </div>
   </div>
   <% end %>
+

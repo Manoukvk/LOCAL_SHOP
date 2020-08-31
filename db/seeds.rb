@@ -46,15 +46,15 @@ designer3 = Designer.create(name: "A.D. DEERTZ", description: "Deertz menswear d
 url = "https://res.cloudinary.com/dujumejgm/image/upload/v1598513046/Designer/ID_3/logo-b_id_3_pajl2g.svg"
 attach_photo(designer3, url)
 
-designer4 = Designer.create(name: "HUNDHUND", description: "HUNDHUND is a Berlin creative studio dedicated to crafting clothes with an environmental and social  focus. Conceived by designer Isabel Kücke and her partner Rohan Hoole while living together in India, the label was finally born in 2016 when they moved back to Berlin. We make our clothes together with small European ateliers who treat their workers fairly, and we source textiles through innovative fabric methods in order to reduce our environmental impact." )
+designer4 = Designer.create(name: "HUNDHUND", description: "HUNDHUND is a Berlin creative studio dedicated to crafting clothes with an environmental and social  focus. Conceived by designer Isabel Kücke and her partner Rohan Hoole while living together in India, the label was finally born in 2016 when they moved back to Berlin." )
 url = "https://res.cloudinary.com/dujumejgm/image/upload/v1598513051/Designer/ID_4/logo_ID4_fmban0.png"
 attach_photo(designer4, url)
 
-designer5 = Designer.create(name: "KIJJJI", description: "Kijjji is the avatar of Bruni, a multidisciplinary visual artist who lives in Buenos Aires. She works between the world of art and fashion. Applying her art to everything, she explores the arts, makes garments that decorate with their embroidery and drawings, paints giant canvases, woods he graffiti with hiraganas, sequined embroidery and makes ceramic gardens." )
+designer5 = Designer.create(name: "KIJJJI", description: "Kijjji is the avatar of Bruni, a multidisciplinary visual artist who lives in Buenos Aires. Applying her art to everything, makes garments that decorate with their embroidery and drawings, paints giant canvases, woods he graffiti with hiraganas, sequined embroidery and makes ceramic gardens." )
 url = "https://res.cloudinary.com/dujumejgm/image/upload/v1598513054/Designer/ID_5/KIJJJI-LOGOOO-01-scaled-3_ID5_lscy6w.png"
 attach_photo(designer5, url)
 
-designer6 = Designer.create(name: "Buki Akomolafe", description: "BUKI AKOMOLAFE is a Berlin based clothing label founded by Buki Akomolafe in 2016. Her German/Nigerian heritage bring a diverse background of tradition, handcraft, design experience, and aesthetic vision. The label stands for Contemporary high-end women’s clothing with a slight hint to androgyny, precise tailoring and high quality eco materials. The small-scale collections are fully handcrafted with care in her studio and a small manufacture in Berlin. Beside the Basic range, BUKI AKOMOLAFE is specialized in the creation of unique Quilt pieces, that are reversible and limited editions." )
+designer6 = Designer.create(name: "Buki Akomolafe", description: "BUKI AKOMOLAFE is a Berlin based clothing label founded in 2016.German/Nigerian heritage bring a diverse background of tradition, handcraft, design experience, and aesthetic vision. She is specialized in the creation of unique Quilt pieces, that are reversible and limited editions." )
 url = "https://res.cloudinary.com/dujumejgm/image/upload/v1598513056/Designer/ID_6/Logo_bukiakomolafe.eps_360x_logo_bsprkb.webp"
 attach_photo(designer6, url)
 
@@ -62,11 +62,11 @@ designer7 = Designer.create(name: "Dinosaurio", description: "Two graphic design
 url = "https://res.cloudinary.com/dujumejgm/image/upload/v1598513059/Designer/ID_7/0Yoz1XKr_400x400logo_ID7_dra3sg.jpg"
 attach_photo(designer7, url)
 
-designer8 = Designer.create(name: "MelosaMinca", description: " I am a Berlin-based upcycling enthusiast and designer. My interest in ethical fashion started to grow when I was studying Sustainable Development. In 2018 I launched my own online shop where you can find ‘System Recovery‘ – collection of upcycled and reworked one-of-a-kind clothes designed and made by me and my team in Berlin." )
+designer8 = Designer.create(name: "MelosaMinca", description: "Berlin-based upcycling enthusiast and designer. My interest in ethical fashion started to grow when I was studying Sustainable Development. In 2018 I launched my own online shop where you can find ‘System Recovery'." )
 url = "https://res.cloudinary.com/dujumejgm/image/upload/v1598513061/Designer/ID_8/cropped-3logo_ID8_veyuer.jpg"
 attach_photo(designer8, url)
 
-designer9 = Designer.create(name: "Bymaqu", description: "Discover here our green fashion made of organic cotton, Lyocell, recycled material, alpaca + sheep wool and vegan rubber shoes.  For us, sustainability means fair wages, social responsibility for all involved & always the most sustainable fabrics. Our clothes are handmade in high quality for a long durability." )
+designer9 = Designer.create(name: "Bymaqu", description: "Discover here our green fashion made of organic cotton, Lyocell, recycled material, alpaca + sheep wool and vegan rubber shoes. Sustainability means fair wages, social responsibility for all involved & always the most sustainable fabrics." )
 url = "https://res.cloudinary.com/dujumejgm/image/upload/v1598513066/Designer/ID_9/Maqu_Logo_ID9_ia4wd0.png"
 attach_photo(designer9, url)
 
