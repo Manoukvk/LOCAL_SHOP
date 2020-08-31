@@ -1,1 +1,43 @@
-<%= render "shared/product_card", product: @product %>
+<div class="container-fluid">
+  <div class="d-flex">
+    <div class= " col-lg-4">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <%  @product.photos.each do |photo|  %>
+          <div class="carousel-item <%= photo == @product.photos.first && "active" %>">
+            <%= cl_image_tag photo.key, class: "d-block w-100" %>
+          </div>
+        <% end %>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    </div>
+  </div>
+    <div class="card-body">
+        <h3> <%= @product.designer.name %> </h3>
+        <h2> <%= @product.name %> </h2>
+        <p class="card-text"> <%= @product.description %> </p>
+          <div class="form-group col-md-4 pl-0">
+      <label for="inputState">Select</label>
+      <select id="inputState" class="form-control">
+        <option selected>Size</option>
+        <option>S</option>
+        <option>M</option>
+        <option>L</option>
+      </select>
+      <div>
+       <button class="btn btn-light w-100" type="submit">Add to my cart</button>
+       <%#= button_to "Add to cart", order_products_path(product: @product)  %>
+       <p>Ships from Germany | FREE Shipping & Returns within Germany</p>
+      </div>
+    </div>
+
+    </div>
+</div>
+
