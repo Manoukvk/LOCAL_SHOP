@@ -3,7 +3,11 @@ class PagesController < ApplicationController
 
   def home
   end
+
+
 end
+
+
 
 #   def designer
 #     designer = Designer.find
