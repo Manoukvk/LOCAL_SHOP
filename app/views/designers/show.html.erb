@@ -13,20 +13,8 @@
 
 <section class="row justify-content-center">
   <% @designer.products.each do |product| %>
-  <%= link_to product_path(product), class: "mt-5" do  %>
-  <div class="col-lg-4 h-100">
-    <div class="card h-100" style="width: 32rem;">
-      <div class="card-body">
-        <h3> <%= product.name %> </h3>
-        <p class="card-text"> <%= product.description %> </p>
-      </div>
-      <%= cl_image_tag product.photos.first.key, class: "card-img-top" %>
-      <div class="d-flex justify-content-between align-items-center pl-3 pr-3 pb-2 pt-2">
-      </div>
-    </div>
-  </div>
+    <%= render "shared/product_card", product: product %>
   <% end %>
-<% end %>
 </section>
 
 
