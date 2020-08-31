@@ -10,7 +10,10 @@
       <%= cl_image_tag product.photos.first.key, class: "card-img-top" %>
       <div class="d-flex justify-content-between align-items-center pl-3 pr-3 pb-2 pt-2">
         <p class="mb-0"> <%= product.price %>,- € </p>
+        <p class="mb-0"><%= "Available size" %> </p>
+        <%= link_to product_orders_products_path(product), method: :post do%>
         <i class="fas fa-shopping-cart"></i>
+        <% end %>
       </div>
     </div>
   </div>
