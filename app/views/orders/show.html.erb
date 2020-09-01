@@ -1,4 +1,30 @@
-<% @order.order_products.each do |item| %>
-<%= item.product.name%>
-<%= item.product.price%>
-<% end %>
+ <div class="title">
+    Shopping Bag
+  </div>
+
+  <div class="container">
+   <%  @order.order_products.each do |item| %>
+         <div class="row">
+         <div class="col">
+            <%= "Eliminate" %>
+          </div>
+          <div class="col">
+            <%= item.product.name %>
+          </div>
+          <div class="col">
+            <%= item.quantity %>
+          </div>
+          <div class="col">
+            <%= item.product.price %>
+          </div>
+          <div class="col">
+            <%= cl_image_tag item.product.photos.first.key, class: "card-img-checkout" %> 
+          </div>
+         </div>
+  <% end %>
+  <div class="container">
+    <div class="row">
+      <%= @order.total %>
+    </div>
+  </div>
+</div>

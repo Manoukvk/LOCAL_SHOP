@@ -34,7 +34,7 @@ end
 
 
 
-designer1 = Designer.create!(name: "The Maldonado", description: "This capsule collection was made during the covid isolation. Made of deastock/faulty textiles and some reworked vintage items found in Bogotá - Colombia." )
+designer1 = Designer.create(name: "The Maldonado", description: "This capsule collection was made during the covid isolation. Made of deastock/faulty textiles and some reworked vintage items found in Bogotá - Colombia." )
 url = "https://res.cloudinary.com/dujumejgm/image/upload/v1598513042/Designer/ID_1/LOGO-Maldonado_ID_1_meq3p6.gif"
 attach_photo(designer1, url)
 
