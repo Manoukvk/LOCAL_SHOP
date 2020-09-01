@@ -4,7 +4,6 @@ class CreateOrderProducts < ActiveRecord::Migration[6.0]
       t.references :order, null: false, foreign_key: true
       t.references :product, null: false, foreign_key: true
       t.integer :quantity
-      t.integer :price
 
       t.timestamps
     end

@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   resources :designers, only: [:index, :show]
 
- resources :orders, only: [:show]
+ resources :orders, only: [:show] do
+    get "/purchase", to: "orders#purchase", as: :purchase
+ end
 
 end
