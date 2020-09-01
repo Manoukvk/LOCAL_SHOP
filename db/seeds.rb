@@ -34,7 +34,7 @@ end
 
 
 
-designer1 = Designer.create(name: "The Maldonado", description: "This capsule collection was made during the covid isolation. Made of deastock/faulty textiles and some reworked vintage items found in Bogotá - Colombia.")
+designer1 = Designer.create!(name: "The Maldonado", description: "This capsule collection was made during the covid isolation. Made of deastock/faulty textiles and some reworked vintage items found in Bogotá - Colombia." )
 url = "https://res.cloudinary.com/dujumejgm/image/upload/v1598513042/Designer/ID_1/LOGO-Maldonado_ID_1_meq3p6.gif"
 attach_photo(designer1, url)
 
@@ -42,7 +42,7 @@ designer2 = Designer.create(name: "ppprecariedad", description: "3D printed jewe
 url = "https://res.cloudinary.com/dujumejgm/image/upload/v1598513050/Designer/ID_2/104475415_105743951187743_4050942015209498348_n_ID2_ffikqk.jpg"
 attach_photo(designer2, url)
 
-designer3 = Designer.create(name: "A.D. DEERTZ", description: "Deertz menswear designs simple and individual classics that have a timeless and unpretentious feel to them. The products evolve out of the appreciation of the craft of textile making where the industrial as well as artisanal techniques are often combined.")
+designer3 = Designer.create(name: "A.D. DEERTZ", description: "Deertz menswear designs simple and individual classics that have a timeless and unpretentious feel to them. The products evolve out of the appreciation of the craft of textile making where the industrial as well as artisanal techniques are often combined." )
 url = "https://res.cloudinary.com/dujumejgm/image/upload/v1598513046/Designer/ID_3/logo-b_id_3_pajl2g.svg"
 attach_photo(designer3, url)
 
@@ -62,7 +62,7 @@ designer7 = Designer.create(name: "Dinosaurio", description: "Two graphic design
 url = "https://res.cloudinary.com/dujumejgm/image/upload/v1598513059/Designer/ID_7/0Yoz1XKr_400x400logo_ID7_dra3sg.jpg"
 attach_photo(designer7, url)
 
-designer8 = Designer.create(name: "MelosaMinca", description: "Berlin-based upcycling enthusiast and designer. My interest in ethical fashion started to grow when I was studying Sustainable Development. In 2018 I launched my own online shop where you can find ‘System Recovery'." )
+designer8 = Designer.create(name: "MelosaMinca", description: "Berlin-based upcycling enthusiast and designer. My interest in ethical fashion started to grow when I was studying Sustainable Development. In 2018 I launched my own online shop where you can find System Recovery." )
 url = "https://res.cloudinary.com/dujumejgm/image/upload/v1598513061/Designer/ID_8/cropped-3logo_ID8_veyuer.jpg"
 attach_photo(designer8, url)
 
@@ -74,7 +74,7 @@ puts ' designer creater'
 
 #designerphoto2 = URI.open('http://bukiakomolafe.com/wp-content/uploads/2014/10/buki_akomolafe24182.jpg')
 #designer1.photo.attach(io: designerphoto2, filename: 'Buki.jpg', content_type: 'image/jpg')
-women_short = Category.create(name: "Short", gender: "Women")
+women_short = Category.create!(name: "Short", gender: "Women")
 women_dress = Category.create(name: "Dress", gender: "Women")
 women_tshirt = Category.create(name: "T-shirt", gender: "Women")
 women_pants = Category.create(name: "Pants", gender: "Women")
