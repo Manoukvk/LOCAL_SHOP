@@ -3,7 +3,15 @@ class OrdersProductsController < ApplicationController
 
     def create
         product = Product.find(params[:product_id])
-        OrderProduct.create(order: @order, product: product, quantity: 1)
+        if OrderProduct.find_by(order: @order, product: product)
+          order_product = OrderProduct.find_by(order: @order, product: product)
+          order_product.quantity += 1
+          order_product.save
+        else
+          OrderProduct.create(order: @order, product: product, quantity: 1)
+        end
+        @order.total += product.price
+        @order.save
         redirect_to request.referrer, notice: "Your item has been added to your cart!"
     end
 
