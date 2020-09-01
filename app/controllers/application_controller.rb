@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   def current_order
     @cart = Order.find_by(user: current_user, status: "pending")
     unless @cart
-      @cart = Order.new(user: current_user, status: "pending")
+      @cart = Order.new(user: current_user, status: "pending", total: 0)
       @cart.save
     end
     @cart
