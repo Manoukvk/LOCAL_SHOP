@@ -4,7 +4,7 @@ class OrdersProductsController < ApplicationController
     def create
         product = Product.find(params[:product_id])
         OrderProduct.create(order: @order, product: product, quantity: 1)
-        redirect_to products_path, notice: "Your product has been added to your cart!"
+        redirect_to request.referrer, notice: "Your item has been added to your cart!"
     end
 
     def destroy
