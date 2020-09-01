@@ -2,9 +2,9 @@
 <% @designers.each do |designer| %>
   <%= link_to designer_path(designer), class: "mt-5" do  %>
 
-  <div class="col-lg-4 h-100" style= "height: 250px !important;">
-    <div class="card h-100" style="width: 30rem;">
-      <div class="card-product h-100 ">
+  <div class="col-lg-4 h-100" style= "height: 250px !important; border-radius: 30px;" >
+
+      <div class="card-product  h-100 " style="width: 30rem;">
 
 
      <%=cl_image_tag designer.photo.key%>
@@ -15,6 +15,6 @@
 
       </div>
     </div>
-  </div>
+
   <% end %>
 <% end %>
