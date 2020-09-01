@@ -1,7 +1,25 @@
 .navbarlogo{
   width: 60px;
-
 }
+
+
+.icon {
+  position: relative;
+}
+
+.cart-items {
+  position: absolute;
+  top: -20px;
+  left: 6px;
+  background-color: red;
+  color: white;
+  padding: 5px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border-radius: 4px;
+}
+
+
 
 
 
