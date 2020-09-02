@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
  resources :orders, only: [:show] do
     get "/purchase", to: "orders#purchase", as: :purchase
+    resources :payments, only: :new
  end
 
 end

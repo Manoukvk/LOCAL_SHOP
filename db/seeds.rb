@@ -135,7 +135,7 @@ url2 = "https://res.cloudinary.com/dujumejgm/image/upload/v1598513043/Designer/I
 url_array = [url1, url2]
 attach_photos(product6, url_array)
 
-product7 = Product.create(name: "DRAGON", description: "DRAGON earrings from the Fantasy Collection, 10 cm.", price: 36, color: "Green", size: "One size", designer: designer2, category: unisex_necklace)
+product7 = Product.create(name: "DRAGON", description: "DRAGON earrings from the Fantasy Collection, 10 cm.", price: 36, color: "Green", size: "One size", designer: designer2, category: unisex_earings)
 url1 = "https://res.cloudinary.com/dujumejgm/image/upload/v1598513043/Designer/ID_2/Products/ID_7/il_fullxfull.2531729487_8sxq_ID7_olfgpg.jpg"
 url2 = "https://res.cloudinary.com/dujumejgm/image/upload/v1598513043/Designer/ID_2/Products/ID_7/il_fullxfull.2531031059_r140_ID7_gprcor.jpg"
 url_array = [url1, url2]

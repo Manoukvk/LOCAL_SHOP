@@ -1,5 +1,6 @@
 class OrdersProductsController < ApplicationController
     before_action :set_order, only: :create
+    skip_before_action :authenticate_user!, only: [ :create, :destroy ]
 
     def create
         product = Product.find(params[:product_id])
