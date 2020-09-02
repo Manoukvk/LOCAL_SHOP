@@ -10,7 +10,8 @@ class OrdersProductsController < ApplicationController
           order_product.quantity += 1
           order_product.save
         else
-          OrderProduct.create(order: @order, product: product, quantity: 1, price: product.price)
+          order_product = OrderProduct.new(order: @order, product: product, quantity: 1, price: product.price)
+          order_product.save
         end
         @order.total += product.price
         @order.save
