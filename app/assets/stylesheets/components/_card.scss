@@ -12,25 +12,33 @@
     font-size: 20px;
   }
   img {
-    height: 70%;
-    width: 80%;
     object-fit: cover;
     align-self: center;
-    border-radius: 15px;
+    height: 470px;
+
+
 
   }
   color:  black;
   font-size: 16px;
   font-family: 'Open Sans', sans-serif;
+  width: 22rem;
+  height: 40rem;
+  margin: 2rem auto;
   background-color: #E5E5E5;
-  .card-body {
-    height: 40px;
+
+  .product_info{
+    height: 80px;
+
   }
+
   .card-center {
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
+
 }
 
 

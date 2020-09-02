@@ -10,17 +10,20 @@
 <!-- 1. How to add link to designers website
      2. how to change photo -->
 
-
-<section class="row justify-content-center">
+<div class="  p-4 " >
+<section class="row ">
   <% @designer.products.each do |product| %>
+
     <%= render "shared/product_card", product: product %>
+
   <% end %>
 </section>
-
+</div>
 
 
 
 <div>
 <%= link_to 'Back to all designers', designers_path %>
 </div>
+
 
