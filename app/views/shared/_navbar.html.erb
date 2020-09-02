@@ -40,7 +40,7 @@
                     <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle">Accessories</a>
                         <ul class="dropdown-menu">
                             <li><%= link_to "Earrings", products_path(category: "earings", gender: "unisex"), class:"dropdown-item" %></li>
-                            <li><%= link_to "Necklace", products_path(category: "necklace", gender: "unisex"), class:"dropdown-item" %></li>
+                            <li><%= link_to "Necklaces", products_path(category: "necklace", gender: "unisex"), class:"dropdown-item" %></li>
                         </ul>
                     </li>
                 </ul>
@@ -51,7 +51,7 @@
           <%=link_to order_path(@cart) do %>
             <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-cart3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
-          </svg>
+            </svg>
           <% end %>
           <% if @cart_amount > 0 %>
             <div class="cart-items">
