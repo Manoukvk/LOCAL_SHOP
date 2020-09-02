@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user! 
+  before_action :authenticate_user!
   before_action :current_order
   def current_order
     @cart = Order.find_by(status: "pending")
