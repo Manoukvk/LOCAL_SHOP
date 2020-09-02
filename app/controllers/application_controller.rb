@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
     @cart = Order.find_by(status: "pending")
      @cart_amount = 0
     unless @cart
-      @cart = Order.new(user: current_user, status: "pending", total: 0)
+      @cart = Order.new(user: curren_user, status: "pending", total: 0)
       @cart.save
     end
       @cart.order_products.each do |product|
@@ -14,3 +14,4 @@ class ApplicationController < ActionController::Base
     @cart
   end
 end
+
