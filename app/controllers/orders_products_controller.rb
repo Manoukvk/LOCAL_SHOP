@@ -1,6 +1,6 @@
 class OrdersProductsController < ApplicationController
     before_action :set_order, only: :create
-    skip_before_action :authenticate_user!, only: [ :create, :destroy ]
+    skip_before_action :authenticate_user!, only: [ :destroy ]
 
     def create
         product = Product.find(params[:product_id])
@@ -31,7 +31,5 @@ class OrdersProductsController < ApplicationController
             @order = Order.new(user: current_user, status: "pending")
             @order.save
         end
-        rescue ActiveRecord::RecordNotFound
-            @order = Order.create
     end
 end
