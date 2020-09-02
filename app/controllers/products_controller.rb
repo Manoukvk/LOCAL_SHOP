@@ -11,6 +11,8 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    @random_products = Product.all.shuffle.take(4)
+
   end
 
   private

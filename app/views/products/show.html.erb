@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <div class="d-flex">
+  <div class="d-flex mb-3">
     <div class= " col-lg-4">
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
@@ -19,25 +19,56 @@
     </a>
     </div>
   </div>
-    <div class="card-body">
-        <h3> <%= @product.designer.name %> </h3>
+    <div class="card-body-white col-8">
+      <p> </p>
+        <h1> <%= @product.designer.name %> </h1>
+        <p></p>
         <h2> <%= @product.name %> </h2>
+        <p></p>
         <p class="card-text"> <%= @product.description %> </p>
-          <div class="form-group col-md-4 pl-0">
-      <label for="inputState">Select</label>
+        <h3> <%= @product.price %> EUR </h3>
+        <div class="form-group col-6 pl-0">
+      <label for="inputState"></label>
       <select id="inputState" class="form-control">
         <option selected>Size</option>
         <option>S</option>
         <option>M</option>
         <option>L</option>
       </select>
-      <div>
-       <button class="btn btn-light w-100" type="submit">Add to my cart</button>
-       <%#= button_to "Add to cart", order_products_path(product: @product)  %>
-       <p>Ships from Germany | FREE Shipping & Returns within Germany</p>
-      </div>
-    </div>
-
+        <div>
+          <%= link_to product_orders_products_path(@product), method: :post do%>
+           <button class="btn btn-light w-100" id="add-to-cart-button" type="submit">Add to my cart</button>
+           <% end %>
+           <p></p>
+         </div>
+       </div>
+       <P></P>
+        <p class="pt-5">Ships from Germany | FREE Shipping & Returns within Germany</p>
     </div>
 </div>
+
+  <div class="other-products">
+   <p> You Might Also Like </p>
+  </div>
+  <div class= "row">
+  <% @random_products.each do |product| %>
+  <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card-other-products " style="width: 18rem;">
+        <%= link_to product_path(product) do %>
+         <%= cl_image_tag product.photos.first.key, class: "card-img-top card-image-size" %>
+          <div class="card-body-white">
+            <div class="card-text">
+              <h3> <%= product.designer.name %> </h3>
+              <h2 class="name"> <%= product.name %> </h2>
+              <h2 class="price"> <%= product.price %> EUR </h2>
+            </div>
+          </div>
+         <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+
+
 
