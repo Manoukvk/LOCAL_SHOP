@@ -26,6 +26,9 @@ gem 'carrierwave', '~> 1.2'
 gem 'dotenv-rails', groups: [:development, :test]
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
+gem 'stripe'
+gem 'money-rails'
+
 gem 'pg_search', '~> 2.3.0'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
