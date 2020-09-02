@@ -10,5 +10,4 @@ class OrdersController < ApplicationController
     @items = OrderProduct.where(order_id: @order.id)
     @total = @order.total
   end
- 
 end

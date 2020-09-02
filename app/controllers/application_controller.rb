@@ -7,9 +7,12 @@ class ApplicationController < ActionController::Base
         @cart_amount += product.quantity
       end
     unless @cart
-      @cart = Order.new(user: current_user, status: "pending", total: 0)
+      @cart = Order.new(user: curren_user, status: "pending", total: 0)
       @cart.save
     end
     @cart
   end
 end
+
+
+
