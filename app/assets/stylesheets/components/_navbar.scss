@@ -3,5 +3,24 @@
 
 }
 
+.dropdown-menu, .dropdown-submenu {
+  opacity: 0.9;
+}
 
+.dropdown-menu li:first-child, .dropdown-submenu li:first-child {
+  margin-left: 1vw;
+}
+
+.navbar {
+ background-image: url(image_path('background.jpg'));
+ opacity: 0.9;
+}
+
+.navbar-nav li {
+  align-self: center !important;
+}
+
+.nav-link {
+  padding: 0;
+}
 

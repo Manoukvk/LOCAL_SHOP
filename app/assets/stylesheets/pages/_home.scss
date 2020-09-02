@@ -1,21 +1,38 @@
 // Specific CSS for your home-page
 .banner {
-  background-image: url(sewingmachine.jpeg);
-  height: 600px;
+  background-image: url(sewingbanner.jpg);
+  background-size: auto 400px;
+  height: 400px;
+  padding-top: 70px;
+  padding-bottom: 12px;
 }
 
-.banner h1{
+.banner h4 {
   color: white;
   font-family: Times New Roman;
-  font-size: 28px;
-  line-height: 40px;
-  margin: 0 30px 40px;
-  position: relative;
-  top: 240px;
-  left: 170px;
-  font-weight: 200;
-  opacity: 2;
+  font-size: 36px;
+  line-height: 55px;
+  margin-left: 680px;
+  margin-right: 100px;
+  font-weight: normal !important;
+  font-style: normal;
+  // position: relative;
+  // top: 240px;
+  // left: 170px;
+  // font-weight: 200;
+  // opacity: 2;
+}
 
+.banner h5 {
+ color: white;
+ font-family: Times New Roman;
+ font-size: 36px;
+ margin-left: 680px;
+ margin-right: 100px;
+ line-height: 55px;
+ font-weight: normal;
+ font-style: normal;
+ margin-top: 80px;
 }
 
 .banner p{
