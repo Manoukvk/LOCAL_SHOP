@@ -6,7 +6,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
-  border-radius: 15px !important;
+  border-radius: 5px !important;
 
 }
 
@@ -14,22 +14,25 @@
   height: 100%;
   width: 100px;
   object-fit: contain;
+  padding-left: 8px;
 }
 
 .card-product a {
-font-size:10px;
-
-
+font-size: 10px;
 }
 
 .card-product h2 {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   margin: 0;
+}   .designer-name {
+  padding-top: 20px;
 }
 
 .card-product p {
-  font-size: 12px;
+  font-size: 15px;
+  font-family: Light 300;
+  letter-spacing: 1px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
