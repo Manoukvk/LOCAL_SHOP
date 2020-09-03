@@ -1,23 +1,19 @@
 <div>
   <div class="designer-description">
     <%=cl_image_tag @designer.photo.key%>
-    <div class="card-product-infos">
-      <h2><%= @designer.name%></h2>
-      <p><%= @designer.description  %></p>
+      <div class="card-product-infos">
+        <h2><%= @designer.name%></h2>
+        <p><%= @designer.description  %></p>
+      </div>
     </div>
-  </div>
-
-  <!-- 1. How to add link to designers website
-      2. how to change photo -->
-
-  <div class="  p-4 " >
-  <section class="row ">
-    <% @designer.products.each do |product| %>
-      <%= render "shared/product_card", product: product %>
-    <% end %>
-    <section class="row ">
-    <%= link_to 'Back to all designers', designers_path %>
-  </section>
+  <div class=" p-4" >
+    <section class="row">
+      <% @designer.products.each do |product| %>
+        <%= render "shared/product_card", product: product %>
+      <% end %>
+      <!-- <section class="row "> -->
+        <%= link_to 'Go back to all designers', designers_path, class:"btn btn-info btn-leila"%>
+    </section>
   </div>
 </div>
 
