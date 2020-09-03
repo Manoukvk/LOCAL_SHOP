@@ -21,7 +21,8 @@ class OrdersProductsController < ApplicationController
         #first retrive the order product id the params
         raise
         @orderproduct = OrderProduct.find(params[:id])
-        @orderpoduct.destroy
+        @orderproduct.destroy
+        redirect_to order_path(@orderproduct.order)
     end
 
     private
