@@ -21,12 +21,12 @@
   </div>
     <div class="card-body-white col-8">
       <p> </p>
-        <h3> <%= @product.designer.name %> </h3>
+        <h1> <%= @product.designer.name %> </h1>
         <p></p>
         <h2> <%= @product.name %> </h2>
         <p></p>
         <p class="card-text"> <%= @product.description %> </p>
-        <h2> <%= @product.price %> EUR </h2>
+        <h3> <%= @product.price %> EUR </h3>
         <div class="form-group col-6 pl-0">
       <label for="inputState"></label>
       <select id="inputState" class="form-control">
@@ -40,14 +40,15 @@
            <button class="btn btn-light w-100" id="add-to-cart-button" type="submit">Add to my cart</button>
            <% end %>
            <p></p>
-           <p>Ships from Germany | FREE Shipping & Returns within Germany</p>
          </div>
        </div>
+       <P></P>
+        <p class="pt-5">Ships from Germany | FREE Shipping & Returns within Germany</p>
     </div>
 </div>
 
   <div class="other-products">
-   <p> You Might Also Like </p>
+   <p> You  Might  Also  Like ... </p>
   </div>
   <div class= "row">
   <% @random_products.each do |product| %>

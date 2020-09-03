@@ -1,5 +1,5 @@
-<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#"> <%= image_tag "smalogo.png", class:"navbarlogo"%> </a>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="#"> <%= image_tag "logo_new.png", class:"navbarlogo"%> </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -8,13 +8,13 @@
       <li class="nav-item active">
         <a class="nav-link" href="#"><%= link_to'HOME',root_path %> <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item" style="align-self: flex-end;">
+      <li class="nav-item">
          <%= link_to 'DESIGNERS',designers_path %>
       </li>
           <li class="nav-item dropdown">
                 <a class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= link_to 'CATEGORIES',products_path %></a>
                 <ul class="dropdown-menu mt-0" aria-labelledby="navbarDropdownMenuLink">
-                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle">&nbsp;&nbsp; Women</a>
+                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle">Women</a>
                         <ul class="dropdown-menu">
                             <li><%= link_to "Shorts", products_path(category: "short", gender: "women"), class:"dropdown-item" %></li>
                             <li><%= link_to "Dresses", products_path(category: "dress", gender: "women"), class:"dropdown-item" %></li>
@@ -28,9 +28,9 @@
                     <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle">Men</a>
                         <ul class="dropdown-menu">
                             <!-- <li><a class="dropdown-item" href="#">&nbsp;&nbsp; Shorts</a></li> -->
-                            <li><%= link_to "Shorts", products_path(category: "short", gender: "men"), class:"dropdown-item" %></li>
+                            <!-- <li><%= link_to "Shorts", products_path(category: "short", gender: "men"), class:"dropdown-item" %></li> -->
                             <li><%= link_to "Shirts", products_path(category: "shirt", gender: "men"), class:"dropdown-item" %></li>
-                            <li><%= link_to "Pants", products_path(category: "pants", gender: "men"), class:"dropdown-item" %></li>
+                            <!-- <li><%= link_to "Pants", products_path(category: "pants", gender: "men"), class:"dropdown-item" %></li> -->
                             <li><%= link_to "Jackets", products_path(category: "jacket", gender: "men"), class:"dropdown-item" %></li>
                             <li><%= link_to "T-Shirts", products_path(category: "t-shirt", gender: "men"), class:"dropdown-item" %></li>
                             <li><%= link_to "Coats", products_path(category: "coat", gender: "men"), class:"dropdown-item" %></li>
@@ -39,8 +39,8 @@
                     </li>
                     <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle">Accessories</a>
                         <ul class="dropdown-menu">
-                            <li><%= link_to "Earrings", products_path(category: "earing", gender: "unisex"), class:"dropdown-item" %></li>
-                            <li><%= link_to "Necklace", products_path(category: "necklace", gender: "unisex"), class:"dropdown-item" %></li>
+                            <li><%= link_to "Earrings", products_path(category: "earings", gender: "unisex"), class:"dropdown-item" %></li>
+                            <li><%= link_to "Necklaces", products_path(category: "necklace", gender: "unisex"), class:"dropdown-item" %></li>
                         </ul>
                     </li>
                 </ul>
@@ -53,17 +53,22 @@
             <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
             </svg>
           <% end %>
-          <div class="cart-items">
-            <%= @cart_amount  %>
-          </div>
+          <% if @cart_amount > 0 %>
+            <div class="cart-items">
+              <%= @cart_amount  %>
+            </div>
+          <% end %>
         <%=link_to new_user_session_path do %>
-        <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-        </svg>
-        <%end%>
-         <%=link_to destroy_user_session_path, method: :delete do %>
-        Log Out
-        <%end%>
+          <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+          </svg>
+        <% end %>
+
+        <% if user_signed_in? %>
+          <%=link_to "LOG OUT", destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%=link_to "LOG IN", new_user_session_path %>
+        <% end %>
       </div>
   </div>
 </nav>

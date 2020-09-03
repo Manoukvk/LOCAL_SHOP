@@ -1,16 +1,18 @@
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!
-  before_action :current_order
-  def current_order
-    @cart = Order.find_by(status: "pending")
-     @cart_amount = 0
-    unless @cart
-      @cart = Order.new(user: current_user, status: "pending", total: 0)
-      @cart.save
+  before_action :initialize_session
+  before_action :initialize_cart
+
+  def initialize_cart
+    @cart = Order.find(session[:order_id])
+    @cart_amount = 0
+    @cart.order_products.each do |product|
+      @cart_amount += product.quantity
     end
-      @cart.order_products.each do |product|
-        @cart_amount += product.quantity
-      end
-    @cart
+  end
+
+  def initialize_session
+    session[:order_id] ||= Order.create(status: "pending").id
   end
 end
+
