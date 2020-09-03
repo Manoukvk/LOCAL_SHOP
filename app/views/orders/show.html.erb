@@ -9,7 +9,7 @@
 
          <div class="row align-items-center shadow-sm">
          <div class="col btn-eliminate">
-            <%= link_to "🗑", product_orders_product_path(item.product, item, method: :delete) %>
+            <%= link_to "🗑", product_orders_product_path(item.product, item), method: :delete %>
           </div>
 
           <div class="col description">
@@ -35,7 +35,9 @@
     </div>
   </div>
   <% if params[:status] == "paid" %>
+  <div class="purchase-completed">
     <p>Purchase completed!</p>
+    </div>
   <% else %>
     <%=link_to "Purchase", order_purchase_path(@order), class:"btn btn-pay"%>
   <% end %>

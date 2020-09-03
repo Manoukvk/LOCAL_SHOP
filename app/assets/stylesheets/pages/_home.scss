@@ -1,16 +1,16 @@
 // Specific CSS for your home-page
 .banner {
-  background-image: url(sewingbanner.jpg);
+  background-image: url("sewingbanner.jpg");
   background-size: auto 400px;
   height: 400px;
-  padding-top: 70px;
-  padding-bottom: 12px;
+  padding-top: 78px;
+  padding-bottom: 22px;
 }
 
 .banner h4 {
   color: white;
   font-family: Times New Roman;
-  font-size: 36px;
+  font-size: 30px;
   line-height: 55px;
   margin-left: 680px;
   margin-right: 100px;
@@ -26,13 +26,13 @@
 .banner h5 {
  color: white;
  font-family: Times New Roman;
- font-size: 36px;
+ font-size: 30px;
  margin-left: 680px;
  margin-right: 100px;
  line-height: 55px;
  font-weight: normal;
  font-style: normal;
- margin-top: 80px;
+ margin-top: 50px;
 }
 
 .banner p{
@@ -47,10 +47,79 @@
   opacity: 2;
 }
 
-.btn1 {
+.container-1 h1 {
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 20px;
+  text-align: center;
+  align-content: space-between;
+}
+
+.card {
+  margin-top: 40px;
+  height: 200px;
+}
+
+.card-w {
+  background: url("https://images.unsplash.com/photo-1523297467724-f6758d7124c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1262&q=80") no-repeat;
+  height: 480px;
+  background-size: contain;
   position: relative;
-  top: 250px;
-  left: 200px;
+  margin: 0;
+  .card-body h3 {
+    color: #F3F5F7 !important;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    padding-bottom: 1rem;
+    position: absolute;
+    bottom: 1rem;
+    margin-left: 120px;
+  }
+}
+
+.card-m {
+  background: url("https://images.unsplash.com/photo-1566133919355-d72f16e0d1b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80") no-repeat;
+  height: 480px;
+  background-size: contain;
+  position: relative;
+  margin: 0;
+  .card-body h3 {
+    color: #F3F5F7 !important;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    padding-bottom: 1rem;
+    position: absolute;
+    bottom: 1rem;
+    margin-left: 120px;
+  }
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+// .card-body-women {
+//   margin-left: 200px;
+// }
+
+// .card-2 {
+//   height: 50px;
+// }
+
+.top-designers {
+  text-align: center;
+  margin-top: 50px;
+  border: 0;
+}
+
+.btn1 {
+  //   s
+  top: 50px;
+  left: 50px;
+  margin-left: 1550px;
   color: white;
   border-radius: 5px;
   border: none;
@@ -58,9 +127,16 @@
 
 .btn2 {
   border-radius: 5px;
-  position: relative;
-  top: 250px;
-  left: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  margin-left: 1410px;
+  margin-top: 20px !important;
+  margin-bottom: 60px !important;
+  // position: relative;
+  // top: 250px;
+  // left: 300px;
 }
 
 button a {
@@ -71,7 +147,6 @@ button a {
 }
 button a:hover {
   color:white;
-
 }
 
 // .card img{
@@ -90,12 +165,12 @@ li:first-child
   margin:0;
 }
 
-footer
-{
-  padding-top: 10px;
-  padding-bottom: 10px;
-  justify-content: center;
-}
+// footer
+// {
+//   padding-top: 10px;
+//   padding-bottom: 10px;
+//   justify-content: center;
+// }
 
 .content
 {
@@ -103,15 +178,15 @@ footer
   background-color: lightgray;
 }
 
-.container
-{
-  background-color: #F4F4F4;
-}
+// .container
+// {
+//   background-color: #F4F4F4;
+// }
 
-.copyright,  .impressum
-{
-  text-align: right;
-}
+// .copyright,  .impressum
+// {
+//   text-align: right;
+// }
 
 .logo
 {

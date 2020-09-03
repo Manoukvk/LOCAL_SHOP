@@ -1,14 +1,14 @@
 <nav class="navbar sticky-top navbar-expand-lg navbar-light">
-  <a class="navbar-brand" href="#"> <%= image_tag "logo_new.png", class:"navbarlogo"%> </a>
+  <a class="navbar-brand" href="/"> <%= image_tag "logo_new.png", class:"navbarlogo"%> </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#"><%= link_to'HOME',root_path %> <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#"><%= link_to'HOME',root_path %> <span class="sr-only ">(current)</span></a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item ml-4 mr-2">
          <%= link_to 'DESIGNERS',designers_path %>
       </li>
           <li class="nav-item dropdown">
@@ -58,18 +58,26 @@
               <%= @cart_amount  %>
             </div>
           <% end %>
-        <%=link_to new_user_session_path do %>
-          <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-          </svg>
-        <% end %>
-
+        </div>
         <% if user_signed_in? %>
-          <%=link_to "LOG OUT", destroy_user_session_path, method: :delete %>
+          <%=link_to destroy_user_session_path, method: :delete do %>
+            <div class="d-flex align-items-center ml-4">
+              <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+              </svg>
+              <p class="mb-0 ml-2">LOG OUT</p>
+            </div>
+          <% end %>
         <% else %>
-          <%=link_to "LOG IN", new_user_session_path %>
+          <%=link_to new_user_session_path do %>
+          <div class="d-flex align-items-center ml-4">
+              <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+              </svg>
+              <p class="mb-0 ml-2">LOG IN</p>
+            </div>
+          <% end %>
         <% end %>
-      </div>
   </div>
 </nav>
 

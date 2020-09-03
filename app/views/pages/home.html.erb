@@ -1,94 +1,81 @@
-
-<div class="banner">
-  <h4 class>We are driven bei <span style="font-weight: semibold; font-size: 40px;">Humanity </span>and driven by <span style="font-weight: semibold; font-size: 40px;">Creativity</span>. Many
-  Berlin Talents prove sustainable fashion can be <span style="font-weight: semibold; font-size: 40px;">Modern</span> and
-<span style="font-weight: semibold; font-size: 40px;">Stylish</span></h1>
-  <h5 class>The brands were selected for you create <span style="font-weight: semibold; font-size: 40px;">Bold</span> designs,
-  <span style="font-weight: semibold; font-size: 40px;">Consciously</span></h2>
-<!-- <h1 class= "pt-5">
-  Berlin talents prove sustainable fashion can be modern and stylish</h1>
-  <p> Discover the latest trends in Vegan Crafted Summer Clothes </p> -->
- <br>
- <!-- <div class="d-flex justify-content-start">
-  <button type="button" class="btn btn-secondary btn-lg btn1"><%= link_to 'SHOW MORE',products_path %> </button>
-  <button type="button" class="btn btn-secondary btn-lg btn2"><%= link_to'SEE OUR DESIGNER',designers_path %> </button>
-</div> -->
+<div>
+  <div class="banner">
+    <h4 class>
+      We are driven bei
+      <span style="font-weight: semibold; font-size: 40px;">
+        Humanity
+      </span>
+      and driven by
+      <span style="font-weight: semibold; font-size: 40px;">
+        Creativity
+      </span>
+      . Many Berlin Talents prove sustainable fashion can be
+      <span style="font-weight: semibold; font-size: 40px;">
+        Modern
+      </span>
+      and
+      <span style="font-weight: semibold; font-size: 40px;">Stylish</span>
+    </h4>
+    <h5 class>
+      The brands we selected for you create
+      <span style="font-weight: semibold; font-size: 40px;">Bold</span>
+      designs,
+      <span style="font-weight: semibold; font-size: 40px;">Consciously</span>
+    </h5>
+    <div class="d-flex justify-content-start">
+      <button type="button" class="btn btn-secondary btn-lg btn1">
+        <%= link_to 'SHOW MORE',products_path %>
+      </button>
+    </div>
+  </div>
+  <br/>
+  <h1 class="top-designers font-weight-bold">Top designers</h1>
+  <div class="row" style="justify-content: center;">
+    <% @top_designers.each do |designer| %>
+      <%= link_to designer_path(designer), class: "mt-5" do  %>
+        <div class="col-lg-4 h-100" style="height: 250px !important; border-radius: 30px;">
+          <div class="card-product  h-100 " style="width: 30rem; margin-left: 5px; margin-right: 5px;">
+            <%=cl_image_tag designer.photo.key%>
+            <div class="card-product-infos">
+              <h2>
+                <%= designer.name %>
+              </h2>
+              <p>
+                <%= designer.description  %>
+              </p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  <button type="button" class="btn btn-secondary btn-lg btn2">
+    <%= link_to'SEE ALL DESIGNERS',designers_path %>
+  </button>
+  <div class="container-2 d-flex justify-content-center">
+    <div class="card card-w mx-5">
+      <%= link_to products_path(gender: "women") do %>
+        <div class="card-body">
+          <h3 class="text-center">WOMEN</h3>
+        </div>
+      <% end %>
+    </div>
+    <div class="container-2 d-flex justify-content-center">
+      <div class="card card-m mx-5">
+        <%= link_to products_path(gender: "men") do %>
+          <div class="card-body">
+            <h3 class="text-center">MEN</h3>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <br/>
+  <h1 class="top-designers font-weight-bold">Our top products</h1>
+  <div class="row" style="justify-content: center;">
+    <% @products.each do |product| %>
+      <%= render "shared/product_card", product: product %>
+    <% end %>
+  </div>
 </div>
 
-<h1> Top Designers </h1>
-
-<div class="container d-flex align-items-stretch">
-  <div class="card">
-    <img class="card-img-top w-100"  src="" alt="Card image cap">
-    <div class="card-body">
-
-    </div>
-  </div>
-
-  <div class="card " style="width: 18rem;">
-    <img class="card-img-top w-100"  src="" alt="Card image cap">
-    <div class="card-body">
-    </div>
-  </div>
-
-
-<div class="container d-flex align-items-stretch">
-  <div class="card">
-    <img class="card-img-top w-100"  src="https://images.unsplash.com/photo-1523297467724-f6758d7124c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1262&q=80" alt="Card image cap">
-    <div class="card-body">
-      <h2> Women </h2>
-
-    </div>
-  </div>
-
-  <div class="card " style="width: 18rem;">
-    <img class="card-img-top w-100"  src="https://images.unsplash.com/photo-1566133919355-d72f16e0d1b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80" alt="Card image cap">
-    <div class="card-body">
-      <h2> Men </h2>
-
-    </div>
-  </div>
-
-  <!-- <div class="card " style="width: 18rem;">
-    <img class="card-img-top card-img-small"  src="https://images.unsplash.com/photo-1568306340504-7f25324c0ce8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60 " alt="Card image cap">
-    <div class="card-body">
-      <h3> Leila </h3> -->
-
-    </div>
-  </div>
-</div>
-<br>
-
-<div class="container-fluid">
-  <footer class="row">
-    <div class="sozial col-xs-12 col-sm-6 col-sm-push-6">
-      <ul class="row">
-        <li class="col-xs-6 col-sm-2">
-          <a href="#">
-            <img class="logo" src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_facebook-128.png">
-          </a>
-        </li>
-        <li class="col-xs-6 col-sm-2">
-          <a href="#">
-            <img class="logo" src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/twitter_online_social_media-128.png">
-          </a>
-        </li>
-        <li class="col-xs-6 col-sm-2">
-          <a href="#">
-            <img class="logo" src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/instagram_online_social_media_photo-128.png">
-          </a>
-        </li>
-        <li class="col-xs-6 col-sm-2">
-          <a href="#">
-            <img class="logo" src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_google_plus-128.png">
-          </a>
-        </li>
-      </ul>
-    </div><!-- Ende Sozial media -->
-
-    <div class="copyright col-xs-12 col-sm-3 col-sm-pull-6">
-      <p> &copy; from Berlin with love </p>
-    </div><!-- Ende Copyright -->
-
-  </footer>
-</div>

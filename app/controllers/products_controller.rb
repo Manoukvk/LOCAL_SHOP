@@ -4,6 +4,8 @@ class ProductsController < ApplicationController
   def index
     if params[:category].present?
       @products = Product.all.select { |product| product.category.name.downcase == "#{params[:category]}"&& product.category.gender.downcase == "#{params[:gender]}"}
+    elsif params[:gender].present?
+      @products = Product.all.select { |product| product.category.gender.downcase == "#{params[:gender]}"}
     else
       @products = Product.all
     end

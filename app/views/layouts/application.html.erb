@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LOCALShop</title>
+    <title>Local Shop</title>
+    <%= favicon_link_tag 'favicon.ico' %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -15,9 +16,12 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
-
-    <%= yield %>
+    <div id="page-container">
+      <div id='content-wrap'>
+        <%= render 'shared/navbar' %>
+        <%= render 'shared/flashes' %>
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
