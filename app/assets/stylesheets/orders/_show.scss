@@ -3,7 +3,7 @@
   width: 750px;
   // height: 423px;
   margin: 80px auto;
-  background: #FFFFFF;
+  background: #F3F5F7;
   box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
   border-radius: 6px;
   padding-bottom: 20px;
@@ -50,21 +50,24 @@
   display: flex;
 }
 
-.btn-pay {
-  background: linear-gradient(
-    135deg,
-    rgb(0, 116, 288) 0%,
-    rgb(85, 34, 250) 100%
-  );
-
-  color: white;
-  font-size: 20px;
-  border-radius: 12px;
- bottom: 10 px;
-}
-
 .total-price{
   height:75px;
+}
+
+.text-total {
+  font-size: 25px;
+}
+
+.btn-purchase {
+  margin-left: 23px;
+  margin-right: 5px;
+  width: 20%;
+}
+
+.btn-shopping {
+  background-color: #E9EAEC;
+  border:  #E9EAEC;
+  margin-left: 5px;
 }
 
 .purchase-completed{
