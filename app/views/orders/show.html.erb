@@ -35,7 +35,9 @@
     </div>
   </div>
   <% if params[:status] == "paid" %>
+  <div class="purchase-completed">
     <p>Purchase completed!</p>
+    </div>
   <% else %>
     <%=link_to "Purchase", order_purchase_path(@order), class:"btn btn-pay"%>
   <% end %>
