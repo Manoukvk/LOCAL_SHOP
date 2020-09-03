@@ -9,6 +9,14 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
     @items = OrderProduct.where(order_id: @order.id)
     @total = @order.total
+    if params[:status] == "paid"
+      flash[:notice] = "Thank you for your order!"
+      if @order.status != "paid"
+        @order.status = "paid"
+        @order.save
+        session[:order_id] = Order.create(status: "pending").id
+      end
+    end
   end
 
   def purchase
@@ -24,7 +32,7 @@ class OrdersController < ApplicationController
         currency: 'eur',
         quantity: 1
       }],
-      success_url: order_url(@order),
+      success_url: order_url(@order, status: "paid"),
       cancel_url: order_url(@order)
     )
 

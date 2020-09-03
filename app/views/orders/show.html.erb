@@ -34,6 +34,10 @@
      total <%= humanized_money_with_symbol(@order.total) %>
     </div>
   </div>
-  <%=link_to "Purchase", order_purchase_path(@order), class:"btn"%>
+  <% if params[:status] == "paid" %>
+    <p>Purchase completed!</p>
+  <% else %>
+    <%=link_to "Purchase", order_purchase_path(@order), class:"btn"%>
+  <% end %>
 </div>
 </div>

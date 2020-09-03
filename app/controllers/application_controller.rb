@@ -15,4 +15,3 @@ class ApplicationController < ActionController::Base
     session[:order_id] ||= Order.create(status: "pending").id
   end
 end
-

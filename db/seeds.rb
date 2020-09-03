@@ -51,7 +51,7 @@ url = "https://res.cloudinary.com/dujumejgm/image/upload/v1598513051/Designer/ID
 attach_photo(designer4, url)
 
 designer5 = Designer.create(name: "KIJJJI", description: "Kijjji is the avatar of Bruni, a multidisciplinary visual artist who lives in Buenos Aires. Applying her art to everything, makes garments that decorate with their embroidery and drawings, paints giant canvases, woods he graffiti with hiraganas, sequined embroidery and makes ceramic gardens." )
-url = "https://res.cloudinary.com/dujumejgm/image/upload/v1598513054/Designer/ID_5/KIJJJI-LOGOOO-01-scaled-3_ID5_lscy6w.png"
+url = "https://res.cloudinary.com/dujumejgm/image/upload/v1598883051/Designer/ID_5/KIJJJI-LOGOOO-01-scaled-3_ID5_1_1_j4fr7p.png"
 attach_photo(designer5, url)
 
 designer6 = Designer.create(name: "Buki Akomolafe", description: "BUKI AKOMOLAFE is a Berlin based clothing label founded in 2016.German/Nigerian heritage bring a diverse background of tradition, handcraft, design experience, and aesthetic vision. She is specialized in the creation of unique Quilt pieces, that are reversible and limited editions." )
@@ -216,7 +216,7 @@ url3 = "https://res.cloudinary.com/dujumejgm/image/upload/v1598513052/Designer/I
 url_array = [url1, url2, url3]
 attach_photos(product18, url_array)
 
-product19 = Product.create(name: "GESA PANTS Summer Wool Check", description: "Our cropped Gesa Pants are made with a wide leg, front pleat, and 3/4 legs. This version is crafted from durable light-weight summer wool.", price_cents: "100", color: "Brown", size: 4000, designer: designer4, category: women_pants)
+product19 = Product.create(name: "GESA PANTS Summer Wool Check", description: "Our cropped Gesa Pants are made with a wide leg, front pleat, and 3/4 legs. This version is crafted from durable light-weight summer wool.", price_cents: "4000", color: "Brown", size: "M", designer: designer4, category: women_pants)
 url1 = "https://res.cloudinary.com/dujumejgm/image/upload/v1598513053/Designer/ID_4/Products/ID_19/HUNDHUND_SESSION_3355_rachelisraelaphotography_2048x2048_ID19_hdbez8.jpg"
 url2 = "https://res.cloudinary.com/dujumejgm/image/upload/v1598513053/Designer/ID_4/Products/ID_19/HUNDHUND_SESSION_3354_rachelisraelaphotography_2048x2048_ID19_ndekga.jpg"
 url3 = "https://res.cloudinary.com/dujumejgm/image/upload/v1598513053/Designer/ID_4/Products/ID_19/HUNDHUND_SESSION_3363_rachelisraelaphotography_2048x2048_ID19_ahbur0.jpg"
