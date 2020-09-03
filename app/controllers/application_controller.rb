@@ -12,7 +12,9 @@ class ApplicationController < ActionController::Base
   end
 
   def initialize_session
+    puts "adding order to session"
     session[:order_id] ||= Order.create(status: "pending").id
+    puts "order added to session"
   end
 end
 
