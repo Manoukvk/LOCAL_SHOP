@@ -19,7 +19,6 @@ class OrdersProductsController < ApplicationController
 
     def destroy
         #first retrive the order product id the params
-        raise
         @orderproduct = OrderProduct.find(params[:id])
         @orderproduct.destroy
         redirect_to order_path(@orderproduct.order)
