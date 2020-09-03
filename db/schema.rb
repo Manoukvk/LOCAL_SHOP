@@ -54,7 +54,6 @@ ActiveRecord::Schema.define(version: 2020_09_01_144611) do
     t.bigint "order_id", null: false
     t.bigint "product_id", null: false
     t.integer "quantity"
-    t.integer "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "price_cents", default: 0, null: false
@@ -63,9 +62,8 @@ ActiveRecord::Schema.define(version: 2020_09_01_144611) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.bigint "user_id", null: false
+    t.bigint "user_id"
     t.string "status"
-    t.integer "total"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "total_cents", default: 0, null: false
@@ -84,7 +82,6 @@ ActiveRecord::Schema.define(version: 2020_09_01_144611) do
 
   create_table "products", force: :cascade do |t|
     t.string "name"
-    t.integer "price"
     t.string "color"
     t.bigint "category_id", null: false
     t.text "description"
