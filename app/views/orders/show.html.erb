@@ -1,31 +1,39 @@
+<div class="shopping-cart">
+
  <div class="title">
     Shopping Bag
   </div>
 
   <div class="container">
    <%  @order.order_products.each do |item| %>
-         <div class="row">
-         <div class="col">
-            <%= "Eliminate" %>
+
+         <div class="row align-items-center shadow-sm">
+         <div class="col btn-eliminate">
+            <%= "🗑"  %>
           </div>
-          <div class="col">
+
+          <div class="col description">
             <%= item.product.name %>
           </div>
-          <div class="col">
+
+          <div class="col quantity">
             <%= item.quantity %>
           </div>
           <div class="col">
             <%= humanized_money_with_symbol(item.product.price) %>
           </div>
           <div class="col">
-            <%= cl_image_tag item.product.photos.first.key, class: "card-img-checkout" %> 
+            <%= cl_image_tag item.product.photos.first.key, class: "card-img-checkout" %>
           </div>
          </div>
   <% end %>
+
+
   <div class="container">
-    <div class="row">
-      <%= humanized_money_with_symbol(@order.total) %>
+    <div class="row total-price">
+     Total <%= humanized_money_with_symbol(@order.total) %>
     </div>
   </div>
   <%=link_to "Purchase", order_purchase_path(@order), class:"btn"%>
+</div>
 </div>
