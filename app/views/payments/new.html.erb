@@ -1,24 +1,31 @@
-<div class="container">
-  <div class="row py-4">
-  <h1>Checkout summary</h1>
+<div class="container-payment">
+  <div class=" py-4">
+  <h1>Checkout <%= link_to "Modify my order", order_path(@order), class: "btn btn-info disabled mb-2" %> </h1>
    <%  @order.order_products.each do |item| %>
-    <div class="col-md-4"><%= cl_image_tag item.product.photos.first.key, width: '50%' %></div>
-    <div class="col">
-      <p>Purchase of <strong><%= item.product.name %></strong> for <strong><%= humanized_money_with_symbol item.product.price %></strong></p>
-      <% end %>
-      <h1>Total</h1>
-      <%= humanized_money_with_symbol(@order.total) %>
-      <button id="pay" class="btn btn-primary">Pay</button>
-      <script src="https://js.stripe.com/v3/"></script>
-      <script>
-        const paymentButton = document.getElementById('pay');
-        paymentButton.addEventListener('click', () => {
-          const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
-          stripe.redirectToCheckout({
-            sessionId: '<%= @order.checkout_session_id %>'
-          });
-        });
-      </script>
+      <div class="row justify-content-between align-items-end">
+      <div class="col-6">
+      <p> <%= humanized_money_with_symbol item.product.price %> -  <%= item.product.name %> </p>
+      </div>
+       <div class="col-3">
+        <%= cl_image_tag item.product.photos.first.key, width: '30%' %>
+      </div>
     </div>
-  </div>
+    <% end %>
+       <div class= "payment">
+        <p class="border-top border-dark pt-3 mt-3"> <strong>Total </strong> <%= humanized_money_with_symbol(@order.total) %> </p>
+        <div class="d-flex" style="justify-content: center;" >
+          <button id="confirm-and-pay" class="btn btn-info">Pay</button>
+            <script src="https://js.stripe.com/v3/"></script>
+              <script>
+                const paymentButton = document.getElementById('confirm-and-pay');
+                paymentButton.addEventListener('click', () => {
+                  const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+                  stripe.redirectToCheckout({
+                    sessionId: '<%= @order.checkout_session_id %>'
+                  });
+                });
+              </script>
+          </div>
+    </div>
 </div>
+
