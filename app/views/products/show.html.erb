@@ -1,11 +1,11 @@
 <div class="container-fluid">
   <div class="d-flex mb-3">
-    <div class= " col-lg-4">
+    <div class= "col-lg-4 pl-0">
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <%  @product.photos.each do |photo|  %>
           <div class="carousel-item <%= photo == @product.photos.first && "active" %>">
-            <%= cl_image_tag photo.key, class: "d-block w-100" %>
+            <%= cl_image_tag photo.key, class: "d-block w-100 pt-0" %>
           </div>
         <% end %>
     </div>
@@ -37,7 +37,7 @@
       </select>
         <div>
           <%= link_to product_orders_products_path(@product), method: :post do%>
-           <button class="btn btn-light w-100" id="add-to-cart-button" type="submit">Add to my cart</button>
+           <button class="btn btn-light btn-add-to-cart w-100" id="add-to-cart-button" type="submit">Add to my cart</button>
            <% end %>
            <p></p>
          </div>
@@ -45,19 +45,19 @@
        <P></P>
         <p class="pt-5">Ships from Germany | FREE Shipping & Returns within Germany</p>
     </div>
-</div>
+  </div>
 
-  <div class="other-products">
+  <div class="other-products ml-0 mr-0">
    <p> You  Might  Also  Like ... </p>
   </div>
-  <div class= "row">
+  <div class= "row mb-4 pb-5">
   <% @random_products.each do |product| %>
-  <div class="col-lg-3 col-md-6 col-sm-12">
+  <div class="col-lg-3 col-md-6 col-sm-12 d-flex align-items-stretch">
       <div class="card-other-products " style="width: 18rem;">
         <%= link_to product_path(product) do %>
-         <%= cl_image_tag product.photos.first.key, class: "card-img-top card-image-size" %>
+         <%= cl_image_tag product.photos.first.key, class: "card-img-top card-image-size pt-0" %>
           <div class="card-body-white">
-            <div class="card-text">
+            <div class="card-text pl-0">
               <h3> <%= product.designer.name %> </h3>
               <h2 class="name"> <%= product.name %> </h2>
               <h2 class="price"> <%= product.price %> EUR </h2>
@@ -66,9 +66,6 @@
          <% end %>
         </div>
       </div>
-    <% end %>
+      <% end %>
   </div>
-
-
-
 
