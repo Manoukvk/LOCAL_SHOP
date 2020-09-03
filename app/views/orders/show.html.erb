@@ -9,7 +9,7 @@
 
          <div class="row align-items-center shadow-sm">
          <div class="col btn-eliminate">
-            <%= "🗑"  %>
+            <%= link_to "🗑", product_orders_product(item, method: :delete) %>
           </div>
 
           <div class="col description">
@@ -31,7 +31,7 @@
 
   <div class="container">
     <div class="row total-price">
-     Total <%= humanized_money_with_symbol(@order.total) %>
+     total <%= humanized_money_with_symbol(@order.total) %>
     </div>
   </div>
   <%=link_to "Purchase", order_purchase_path(@order), class:"btn"%>
