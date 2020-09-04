@@ -20,8 +20,10 @@ class OrdersProductsController < ApplicationController
     def destroy
         #first retrive the order product id the params
         @orderproduct = OrderProduct.find(params[:id])
+        @order = @orderproduct.order
+        @order.update(total: @order.order_products.sum(&:price))
         @orderproduct.destroy
-        redirect_to order_path(@orderproduct.order)
+        redirect_to @order
     end
 
     private
