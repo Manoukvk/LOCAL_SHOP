@@ -27,6 +27,17 @@
   margin-left: 150px;
   font-family: helvetica;
   border-radius: 5px;
+  &:hover {
+    background-color: #d8d8d8;
+  }
+  &:focus {
+    background-color: #d8d8d8 !important;
+    border-color: #d8d8d8 !important;
+  }
+  &:active {
+    background-color: #d8d8d8 !important;
+    border-color: #d8d8d8 !important;
+  }
 }
 
 .card-product h2 {
