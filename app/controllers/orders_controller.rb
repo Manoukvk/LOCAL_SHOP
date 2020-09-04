@@ -8,6 +8,7 @@ class OrdersController < ApplicationController
   def show
     @order = Order.find(params[:id])
     @items = OrderProduct.where(order_id: @order.id)
+    @order.update(total: @order.order_products.sum(&:price))
     @total = @order.total
     if params[:status] == "paid"
       flash[:notice] = "Thank you for your order!"
