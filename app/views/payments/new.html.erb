@@ -1,20 +1,23 @@
 <div class="container-payment">
   <div class=" py-4">
-  <h1>Checkout <%= link_to "Modify my order", order_path(@order), class: "btn btn-info disabled mb-2" %> </h1>
+    <div class="d-flex justify-content-between px-3 checkout-payment-title">
+      <h1>Checkout </h1>
+      <%= link_to "Go back to my order", order_path(@order), class: "btn btn-outline-dark back-to-order-button mb-3" %>
+    </div>
    <%  @order.order_products.each do |item| %>
-      <div class="row justify-content-between align-items-end">
-      <div class="col-6">
-      <p> <%= humanized_money_with_symbol item.product.price %> -  <%= item.product.name %> </p>
-      </div>
-       <div class="col-3">
+      <div class="row justify-content-between align-items-end px-4">
+      <div class="col-3">
         <%= cl_image_tag item.product.photos.first.key, width: '30%' %>
+      </div>
+      <div class="col-6">
+      <p class="text-right"> <%= item.product.name %> - <%= humanized_money_with_symbol item.product.price %> </p>
       </div>
     </div>
     <% end %>
        <div class= "payment">
-        <p class="border-top border-dark pt-3 mt-3"> <strong>Total </strong> <%= humanized_money_with_symbol(@order.total) %> </p>
+        <p class="border-top border-dark pt-3 mt-3 px-4 text-right"> <strong>Total </strong> <%= humanized_money_with_symbol(@order.total) %> </p>
         <div class="d-flex" style="justify-content: center;" >
-          <button id="confirm-and-pay" class="btn btn-info">Pay</button>
+          <button id="confirm-and-pay" class="btn btn-info">Proceed to payment</button>
             <script src="https://js.stripe.com/v3/"></script>
               <script>
                 const paymentButton = document.getElementById('confirm-and-pay');

@@ -1,9 +1,4 @@
-// .container {
-// margin-top: 50px;
-// margin-right: 100px;
-// margin-bottom: 100px;
-// max-width: 700px;
-// }
+
 
 .container-payment {
 margin: 0 auto;
@@ -18,11 +13,10 @@ background-color: #F3F5F7;
 }
 
 h1 {
-  font-family: Arial;
+  color: #5E6977;
+  font-family: "Work Sans", "Helvetica", "sans-serif";
   font-size: 30px;
   font-weight: none;
-  border-bottom: 1px solid grey;
-
 }
 
 #confirm-and-pay {
@@ -31,9 +25,19 @@ h1 {
 }
 
 .border-top {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 img {
   padding-top: 10px;
+}
+
+.back-to-order-button {
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.checkout-payment-title {
+  border-bottom: 1px solid grey;
 }
